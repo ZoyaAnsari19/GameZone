@@ -124,7 +124,17 @@ export default function GameZonePlatform() {
         </nav>
 
         {/* Hero Section */}
-        <header className="px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-center">
+            <header className="relative px-4 sm:px-6 lg:px-8 text-center overflow-hidden min-h-screen flex items-center">
+          {/* Background Image with Overlay - extends behind navbar */}
+          <div className="absolute inset-0 z-0" style={{ top: '-100px', bottom: '0', left: '0', right: '0' }}>
+            <img 
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1920&q=80" 
+              alt="Gaming Background" 
+              className="w-full h-screen object-cover opacity-30 fixed top-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/60 to-slate-950" />
+          </div>
+          <div className="relative z-10 max-w-5xl mx-auto space-y-6 sm:space-y-8 py-20 sm:py-32">
           <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8">
             <div className="inline-flex items-center gap-2 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium text-purple-300">
               <Star className="w-4 h-4" />
@@ -153,6 +163,7 @@ export default function GameZonePlatform() {
                 Watch Trailer
               </button>
             </div>
+          </div>
           </div>
         </header>
 
